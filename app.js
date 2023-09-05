@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 const PORT=3000
 
 dotenv.config(); 
-app.listen(PORT,(req,res)=>{
+app.listen(PORT, (req, res)=>{
     console.log(`Backend app running on ${PORT}`)
 })
 
@@ -17,5 +17,5 @@ mongoose.connect(process.env.DATABASE_URL,{
 console.log("Server connected succesfully!")
 })
 .catch((error)=>{
-    res.status(400).json({message:"error connecting to database"})
-})
+    console.error("Error connecting to database:", error);
+});
