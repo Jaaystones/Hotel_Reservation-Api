@@ -53,7 +53,7 @@ export const updateSuiteAvailability = async (req, res, next) => {
   }
 };
 
-export const deletesuite = async (req, res, next) => {
+export const deleteSuite = async (req, res, next) => {
   const hotelId = req.params.hotelid;
   try {
     await Suite.findByIdAndDelete(req.params.id);
