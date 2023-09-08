@@ -1,0 +1,11 @@
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+  "username": "Jay",
+  "email": "Jay@email.com",
+  "country": "Ghana",
+  "city": "Lome",
+  "phone": "09035897529",
+  "password": "jogolo4sokka"
+}

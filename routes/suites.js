@@ -3,11 +3,11 @@ import {
   createSuite,
   deleteSuite,
   getSuite,
-  getRooms,
+  getSuites,
   updateSuite,
   updateSuiteAvailability,
-} from "../controllers/room.js";
-import { verifyAdmin } from "../utils/verifyToken.js";
+} from "../controllers/suite.js";
+import { verifyAdmin } from "../utility/tokenVerification.js";
 
 const router = express.Router();
 //CREATE
@@ -23,6 +23,6 @@ router.delete("/:id/:hotelid", verifyAdmin, deleteSuite);
 router.get("/:id", getSuite);
 //GET ALL
 
-router.get("/", getSuite);
+router.get("/", getSuites);
 
 export default router;

@@ -1,4 +1,5 @@
-const User = require("../models/User.js");
+import User from "../models/Users.js";
+
 
 const handleResponse = (res, data) => {
   res.status(200).json(data);

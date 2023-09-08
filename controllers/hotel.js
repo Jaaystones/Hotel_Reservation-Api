@@ -1,5 +1,5 @@
-const Hotel = require("../models/Hotel.js");
-const Suite = require("../models/Suite.js");
+import Hotel from "../models/Hotel.js";
+import Suite from "../models/Suite.js";
 
 const handleResponse = (res, data) => {
     res.status(200).json(data);
@@ -103,7 +103,7 @@ export const getHotelRooms = async (req, res, next) => {
       const hotel = await Hotel.findById(req.params.id);
       const list = await Promise.all(
         hotel.suite.map((suite) => {
-          return suite.findById(suite);
+          return Suite.findById(suite);
         })
       );
       handleResponse(res, list);

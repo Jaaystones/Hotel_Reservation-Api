@@ -1,5 +1,5 @@
-const Suite = require("../models/Suite.js");
-const Hotel = require("../models/Hotel.js");
+import Suite from "../models/Suite.js";
+import Hotel from "../models/Hotel.js";
 
 const handleResponse = (res, data) => {
   res.status(200).json(data);
